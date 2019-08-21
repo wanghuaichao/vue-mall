@@ -1,0 +1,251 @@
+@charset "utf-8";
+
+/* CSS Document */
+/* 防止用户自定义背景颜色对网页的影响，添加让用户可以自定义字体 */
+
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    font-size: 100%
+}
+
+
+/*IE6对positon:fixed的单独处理修正IE6滚动抖动的bug*/
+
+*html, *html body {
+    background-image: url(about:blank);
+    background-attachment: fixed;
+}
+
+
+/* 重置样式 */
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/*滚动条样式*/
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+    -webkit-appearance: none;
+    overflow: auto;
+}
+
+
+/* ::-webkit-scrollbar-button:end:increment, 
+  ::-webkit-scrollbar-button:start:decrement, 默认导航的顶部和尾部  */
+
+::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    background-color: #e6e6e6;
+    min-height: 25px;
+    min-width: 25px;
+    border: 1px solid #e0e0e0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #ccc;
+}
+
+::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    background-color: #f7f7f7;
+    border: 1px solid #efefef;
+}
+
+::-webkit-scrollbar-track-piece {
+    background-color: #f0f0f0;
+    border-radius: 3px;
+}
+
+html, body, ul, ol, dl, dd, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, button, textarea, p, blockquote, th, td, table, abbr, acronym {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 14px/1.5 tahoma, "SiYuanHei", 'PingFang SC', 'Helvetica Neue', 'Helvetica', 'STHeitiSC-Light', 'Arial', sans-serif;
+    width: 100%
+}
+
+[v-cloak] {
+    display: none !important;
+}
+
+a, button, input, select, textarea, a:focus, button:focus, input:focus, select:focus, textarea:focus, [onclick] {
+    outline: 0 none
+}
+
+input, button, textarea, select {
+    border: 0 none;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    outline: 0 none;
+    text-decoration: none
+}
+
+fieldset, img {
+    border: none;
+    vertical-align: middle;
+}
+
+/* 要注意表单元素并不继承父级 font 的问题 */
+
+button, input, select, textarea {
+    font-size: 1em;
+    line-height: 1;
+    color: #666;
+    outline: 0
+}
+
+input, select, textarea {
+    font-size: 100%;
+}
+
+
+/* 去掉各Table cell 的边距并让其边重合 */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* IE bug fixed: th 不继承 text-align*/
+
+th {
+    text-align: inherit;
+}
+
+
+/* 对齐是排版最重要的因素, 别让什么都居中 */
+
+
+/*caption,th{text-align: left}*/
+
+
+/* 去除默认边框 */
+
+fieldset, img {
+    border: none;
+    outline: 0;
+    -moz-outline: none;
+}
+
+
+/* ie6 7 8(q) bug 显示为行内表现 */
+
+iframe {
+    display: block;
+    border:none;
+}
+
+
+/* 去掉列表前的标识, li 会继承 */
+
+li, ol, ul {
+    list-style: none;
+}
+
+
+/* 一致的 del 样式 */
+
+del {
+    text-decoration: line-through;
+}
+
+
+/* 来自yahoo, 让标题都自定义, 适应多个系统应用 */
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: bold;
+}
+
+
+/* 统一上标和下标 */
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sup {
+    top: -.5em;
+}
+
+sub {
+    bottom: -.25em;
+}
+
+
+/* 默认不显示下划线，保持页面简洁 */
+
+a, ins {
+    text-decoration: none;
+}
+
+
+/* 让链接在 hover 状态下显示下划线 */
+
+a {
+    cursor: pointer;
+    outline: 0;
+}
+
+
+/* 用法 <a href="#" onfocus=this.blur();>链接标题</a>*/
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* 设置内联, 减少浮动带来的bug */
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+
+/* 重设 HTML5 标签, IE 需要在 js 中 createElement(TAG) */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+
+/* HTML5 媒体文件跟 img 保持一致 */
+
+audio, canvas, video {
+    display: inline-block;
+}
+
+
+/* 去掉 firefox 下此元素的边框 */
+
+abbr, acronym {
+    border: 0;
+    font-variant: normal;
+}
+
+address, caption, cite, code, dfn, em, th, var {
+    font-style: normal;
+}
+
+
+
