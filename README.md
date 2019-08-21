@@ -1,4 +1,4 @@
-# vuex-demo
+# vue-mall
 
 ## Project setup
 ```
